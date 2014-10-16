@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1F082719F033BB00DDF141 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 0C1F082619F033BB00DDF141 /* README */; };
 		0C76C57A19EFF63600AF5E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C57919EFF63600AF5E91 /* AppDelegate.swift */; };
 		0C76C57C19EFF63600AF5E91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C57B19EFF63600AF5E91 /* ViewController.swift */; };
 		0C76C57F19EFF63600AF5E91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C76C57D19EFF63600AF5E91 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C1F082619F033BB00DDF141 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		0C76C57419EFF63600AF5E91 /* AXCFiboScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AXCFiboScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C76C57819EFF63600AF5E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C76C57919EFF63600AF5E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		0C76C56B19EFF63600AF5E91 = {
 			isa = PBXGroup;
 			children = (
+				0C1F082619F033BB00DDF141 /* README */,
 				0C76C57619EFF63600AF5E91 /* AXCFiboScroll */,
 				0C76C58C19EFF63600AF5E91 /* AXCFiboScrollTests */,
 				0C76C57519EFF63600AF5E91 /* Products */,
@@ -195,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1F082719F033BB00DDF141 /* README in Resources */,
 				0C76C57F19EFF63600AF5E91 /* Main.storyboard in Resources */,
 				0C76C58419EFF63600AF5E91 /* LaunchScreen.xib in Resources */,
 				0C76C58119EFF63600AF5E91 /* Images.xcassets in Resources */,
@@ -409,6 +413,7 @@
 				0C76C59519EFF63600AF5E91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C76C59619EFF63600AF5E91 /* Build configuration list for PBXNativeTarget "AXCFiboScrollTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				0C76C59819EFF63600AF5E91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
