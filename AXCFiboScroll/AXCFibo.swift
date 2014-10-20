@@ -8,20 +8,22 @@
 
 import UIKit
 
-class AXCFibo: NSObject {
-    // fiboNumbers is an array of UInt64s, following the fibonacci series
-    var fiboNumbers = [UInt64(1),UInt64(1)];
-    // fiboForIndex uses fiboNumbers to return the fibonacci number for the given index, and uses fiboGenerator to generate new numbers if needed
-    func fiboForIndex(index: Int) -> UInt64 {
-        fiboGenerator(index);
-        return UInt64(fiboNumbers[index]);
-    }
-    // fiboGenerator lazily and recursively adds new elements to fiboNumbers
-    func fiboGenerator(index: Int) {
-        if (index >= fiboNumbers.count) {
-            let newElement = UInt64(fiboNumbers[index - 2] + fiboNumbers[index - 1]);
-            fiboNumbers.append(newElement);
-            fiboGenerator(index);
+public class AXCFibo: NSObject {
+    var numbers = [UInt64(0),UInt64(1)];
+    public func getFiboForIndex(index: Int) -> UInt64? {
+        while index >= numbers.count {
+            let lastIndex = numbers.count - 1
+            let indexBeforeLast = numbers.count - 2
+            let lastNumber = numbers[lastIndex]
+            let numberBeforeLast = numbers[indexBeforeLast]
+            if (lastNumber > UInt64.max - numberBeforeLast) {
+                println("requested fibonacci number for index too large for UInt64")
+                return nil;
+            } else {
+                numbers.append(lastNumber + numberBeforeLast)
+            }
         }
+        return numbers[index]
     }
 }
+

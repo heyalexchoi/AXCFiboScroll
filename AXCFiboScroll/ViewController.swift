@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Fibonacci item 93 is 12200160415121876738
         Fibonacci item 94 is 19740274219868223167
         */
-        return 93;
+        return 100;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -39,7 +39,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.textColor = UIColor.whiteColor();
         cell.backgroundColor = UIColor.darkGrayColor();
         cell.selectionStyle = UITableViewCellSelectionStyle.None;
-        cell.textLabel?.text = "Index: " + String(indexPath.item) + "  Fibo: " +  String(fibo.fiboForIndex(indexPath.item));
+        if let valueForIndex : UInt64 = fibo.getFiboForIndex(indexPath.item){
+            cell.textLabel?.text = "Index: \(indexPath.item)  Fibo: \(valueForIndex)"
+        } else {
+            cell.textLabel?.text = "Fibo number for index \(indexPath.item) too large for UInt64"
+        }
         return cell;
     }
     

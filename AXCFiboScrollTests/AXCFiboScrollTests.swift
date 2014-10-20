@@ -8,6 +8,9 @@
 
 import UIKit
 import XCTest
+import AXCFiboScroll
+
+
 
 class AXCFiboScrollTests: XCTestCase {
     
@@ -21,16 +24,20 @@ class AXCFiboScrollTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func fiboTest() {
+
+        var fibo : AXCFibo = AXCFibo();
+        
+        XCTAssert(fibo.getFiboForIndex(0) == 0)
+        XCTAssert(fibo.getFiboForIndex(1) == 1)
+        XCTAssert(fibo.getFiboForIndex(2) == 1)
+        XCTAssert(fibo.getFiboForIndex(3) == 2)
+        XCTAssert(fibo.getFiboForIndex(4) == 3)
+        XCTAssert(fibo.getFiboForIndex(5) == 5)
+        
+        XCTAssert(fibo.getFiboForIndex(100) == nil)
+        XCTAssert(fibo.getFiboForIndex(1000) == nil)
+        XCTAssert(fibo.getFiboForIndex(93) == 12200160415121876738)
+        
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
