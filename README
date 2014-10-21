@@ -1,1 +1,1 @@
-AXCFiboScroll displays an 'endless' scroll of Fibonacci numbers on a UITableView. UInt64 doesn't support numbers larger than the 93rd item in the Fibonacci series: UInt64.max = 18446744073709551615. Fibonacci item 93 is 12200160415121876738 and Fibonacci item 94 is 19740274219868223167. So, this 'endless' scroll stops at the 93rd number. AXCFibo lazily and recursively generates new Fibonacci numbers as needed and stores them in an array. This example was written in Swift.
+AXCFiboScroll displays Fibonacci numbers on a UITableView up to UInt64.max 18446744073709551615. 
