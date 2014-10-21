@@ -37,12 +37,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "mycell");
         cell.textLabel?.textColor = UIColor.whiteColor();
+//        cell.textLabel?.font = UIFont(name: "Helvetica-Neue", size: 10);
         cell.backgroundColor = UIColor.darkGrayColor();
         cell.selectionStyle = UITableViewCellSelectionStyle.None;
         if let valueForIndex : UInt64 = fibo.getFiboForIndex(indexPath.item){
-            cell.textLabel?.text = "Index: \(indexPath.item)  Fibo: \(valueForIndex)"
+            cell.textLabel?.text = "i:\(indexPath.item), f:\(valueForIndex)"
         } else {
-            cell.textLabel?.text = "Fibo number for index \(indexPath.item) too large for UInt64"
+            cell.textLabel?.text = "i:\(indexPath.item), f: value too large"
         }
         return cell;
     }
